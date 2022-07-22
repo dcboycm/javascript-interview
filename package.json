@@ -1,0 +1,20 @@
+{
+  "name": "javascript-interview",
+  "version": "1.0.0",
+  "description": "Take home coding project for the interview process.",
+  "main": "index.js",
+  "repository": "",
+  "author": "Curtis Miller",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "cypress": "^10.3.1",
+    "nodemon": "^2.0.19"
+  }
+}

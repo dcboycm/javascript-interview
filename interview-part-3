@@ -1,0 +1,9 @@
+Using Cypress, write an integration test that does the following:
+
+[ ] Visit 'https://www.nba.com/watch/nba-tv'
+[ ] Click on 'Sign In'
+[ ] Click on 'Sign Up'
+[ ] Fill in form and click 'Create account and continue'
+[ ] Select favorite team and click 'Next'
+[ ] Select email preferences and click 'Next'
+[ ] Click on Not right now
