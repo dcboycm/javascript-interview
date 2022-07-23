@@ -1,1 +1,53 @@
 Describe how you would thoroughly test the "https://www.nba.com/watch/nba-tv" page below:
+
+
+Describe how you would thoroughly test the "https://www.nba.com/watch/nba-tv" page below:
+nba-tv : "https://www.nba.com/watch/nba-tv"
+
+Summary: 
+It appears that the main functionality on this page is to allow the user live access to nba-tv. 
+I would start by having automated tests that check that each header label exists for each section of the page. 
+Additionally, would likely automate accessing the live stream with and without a subscription/tv provider.
+ 
+Finally, below are some workflows that I think would be critical flows to test. 
+
+// accessing live stream without subscription or tv provider
+Given that user navigates to nba-tv
+When user does not have a subscription to nba-tv or a tv provider
+Then the live stream can't be accessed
+
+// accessing live stream with subscription or tv provider
+Given that user navigates to nba-tv
+When user does have a subscription to nba-tv or a tv provider
+Then the live stream CAN be accessed
+
+// accessing live stream schedule
+Given that user navigates to nba-tv
+When user clicks on See Full Schedule
+Then the user is presented with the available nba-tv schedule
+And the user can see other NBA TV Clips
+
+// accessing OTHER media without subscription (i.e FEATURED EPISODES)
+Given that user navigates to nba-tv
+When navigate to available media other than the live stream
+Then the media content CAN be accessed
+
+// accessing NBA FINALS 
+Given that user navigates to nba-tv
+When user navigates to the NBA FINALS section of the page
+Then the user is presented with past, in-order finals media
+
+// accessing live stream from various devices
+Given that user navigates to nba-tv
+When user starts the live stream via browser from multiple devices,
+Then the live stream plays successfully
+
+//all hyperlinks are functional
+Given that user navigates to nba-tv
+When user  clicks on any available hyperlink
+Then user is redirected to the appropiate page
+
+// page responsive design
+Given that user navigates to nba-tv
+When user starts the live stream from multiple devices,
+Then the page resizes according to the device
